@@ -50,3 +50,10 @@ class TestChickenRabbitInvalidInput:
     def test_non_integer_feet(self):
         with pytest.raises(TypeError):
             chicken_rabbit(5, 16.5)
+
+    def test_boolean_inputs_rejected(self):
+        with pytest.raises(TypeError):
+            chicken_rabbit(True, 4)
+
+    def test_large_numbers(self):
+        assert chicken_rabbit(1_000_000, 3_000_000) == (500_000, 500_000)
