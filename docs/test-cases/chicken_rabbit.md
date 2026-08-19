@@ -61,3 +61,12 @@
 ### Case 13: Non-integer Inputs
 - **Input:** heads=5.5, feet=16
 - **Expected Output:** Handle gracefully (type error or conversion)
+
+### Case 14: Boolean Inputs (bool is a subclass of int)
+- **Input:** heads=True, feet=4
+- **Expected Output:** TypeError (booleans are not valid counts)
+
+### Case 15: Large Numbers
+- **Input:** heads=1000000, feet=3000000
+- **Expected Output:** chickens=500000, rabbits=500000
+- **Verification:** 500000+500000=1000000 heads, 500000*2+500000*4=3000000 feet ✓

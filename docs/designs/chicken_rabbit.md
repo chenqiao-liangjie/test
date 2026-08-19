@@ -21,7 +21,7 @@ r = feet / 2 - heads
 ```
 
 ## Constraints & Validation
-1. Both `heads` and `feet` must be non-negative integers
+1. Both `heads` and `feet` must be non-negative integers (booleans rejected explicitly, since `bool` is a subclass of `int` in Python)
 2. `feet` must be even (sum of even numbers)
 3. Minimum feet: `2 * heads` (all chickens)
 4. Maximum feet: `4 * heads` (all rabbits)

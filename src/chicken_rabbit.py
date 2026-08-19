@@ -1,5 +1,5 @@
 def chicken_rabbit(heads: int, feet: int):
-    if not isinstance(heads, int) or not isinstance(feet, int):
+    if not all(isinstance(v, int) and not isinstance(v, bool) for v in (heads, feet)):
         raise TypeError("heads and feet must be integers")
 
     if heads < 0 or feet < 0:
